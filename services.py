@@ -1,4 +1,20 @@
+import json
 transactions=[]
+FILENAME="transactions.json"
+
+
+def save_to_file():
+    with open(FILENAME,'w') as file:
+        json.dump(transactions,file)
+
+def load_from_file():
+    global transactions
+    try:
+        with open(FILENAME,'r') as file1:
+            transactions=json.load(file1)
+    except FileNotFoundError:
+        transactions=[]
+
 
 def add_transactions():
     amount=float(input("Enter amount->"))
@@ -11,6 +27,7 @@ def add_transactions():
         "Input type":type}
         
     transactions.append(transaction)
+    save_to_file()
 
 def view_transactions():
     if len(transactions)==0:
