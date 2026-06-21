@@ -5,7 +5,7 @@ FILENAME="transactions.json"
 
 def save_to_file():
     with open(FILENAME,'w') as file:
-        json.dump(transactions,file)
+        json.dump(transactions,file,indent=4)
 
 def load_from_file():
     global transactions
@@ -17,14 +17,40 @@ def load_from_file():
 
 
 def add_transactions():
-    amount=float(input("Enter amount->"))
-    category=input("enter category->")
-    type=input("Enter Income/Expences->")
+    while True:
+        try:
+            amount=float(input("Enter amount -"))
+
+            if amount <=0:
+                print("Amount must be greater than 0-")
+                continue
+
+            break
+        except ValueError:
+            print("Please enter valid number")
+
+
+    while True:
+        category=input("enter category->").strip()
+        #type=input("Enter Income/Expences->").strip()
+        if not category:
+            print("Please enter the category - it should not be empty")
+        else:
+            break
+    
+    while True:
+        input_type=input("Enter Income/Expence->").strip().lower()
+
+        if input_type not in ['income','expence']:
+            print("Select Either Income/Expence")
+        else:
+            break
+    
     #creating a dictionary
     transaction={
         "Amount":amount,
         "Category":category,
-        "Input type":type}
+        "Input type":input_type}
         
     transactions.append(transaction)
     save_to_file()

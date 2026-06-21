@@ -1,1 +1,82 @@
-[{"Amount": 200.0, "Category": "income", "Input type": "income"}, {"Amount": 10.0, "Category": "food", "Input type": "expence"}, {"Amount": 20.0, "Category": "bike", "Input type": "expence"}, {"Amount": 20.0, "Category": "juice", "Input type": "expence"}, {"Amount": 30.0, "Category": "film", "Input type": "expence"}, {"Amount": 300.0, "Category": "salary", "Input type": "income"}]
+[
+    {
+        "Amount": 200.0,
+        "Category": "salary",
+        "Input type": "income"
+    },
+    {
+        "Amount": 10.0,
+        "Category": "food",
+        "Input type": "expence"
+    },
+    {
+        "Amount": 40.0,
+        "Category": "bike",
+        "Input type": "expence"
+    },
+    {
+        "Amount": 50.0,
+        "Category": "juice",
+        "Input type": "expence"
+    },
+    {
+        "Amount": 500.0,
+        "Category": "salary",
+        "Input type": "income"
+    },
+    {
+        "Amount": 100.0,
+        "Category": "income",
+        "Input type": "30"
+    },
+    {
+        "Amount": 200.0,
+        "Category": "",
+        "Input type": "expen"
+    },
+    {
+        "Amount": 100.0,
+        "Category": "",
+        "Input type": "abc"
+    },
+    {
+        "Amount": 100.0,
+        "Category": "",
+        "Input type": "abc"
+    },
+    {
+        "Amount": 100.0,
+        "Category": "",
+        "Input type": "abc"
+    },
+    {
+        "Amount": 100.0,
+        "Category": "",
+        "Input type": "abc"
+    },
+    {
+        "Amount": 100.0,
+        "Category": "",
+        "Input type": "abc"
+    },
+    {
+        "Amount": 100.0,
+        "Category": "",
+        "Input type": "abc"
+    },
+    {
+        "Amount": 100.0,
+        "Category": "bike",
+        "Input type": "income"
+    },
+    {
+        "Amount": 100.0,
+        "Category": "bike",
+        "Input type": "expence"
+    },
+    {
+        "Amount": 100.0,
+        "Category": "kavana",
+        "Input type": "income"
+    }
+]
