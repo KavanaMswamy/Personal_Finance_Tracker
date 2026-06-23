@@ -60,8 +60,9 @@ def view_transactions():
         print("No transactions found")
         return
     print("Viewing Transactions")
-    for transaction in transactions: #using the loop to take the dictionaries out of loop and print it seperately
+    for index,transaction in enumerate(transactions): #using the loop to take the dictionaries out of loop and print it seperately
     #print(transactions) # directly printing the list
+        print("Transaction ID : ",index)
         print("Amount : ",transaction["Amount"])
         print("Category : ",transaction["Category"])
         print("Input : ",transaction["Input type"])
@@ -83,3 +84,64 @@ def show_summary():
     print("Income=",total_income)
     print("Expence=",total_expence)
     print("Balance=",total_income-total_expence)
+
+def update_transactions():
+    view_transactions()
+
+    try:
+        index=int(input("Enter the Transaction ID to update: "))
+
+        if index < 0 or index>= len(transactions):
+            print("Invalid ID")
+            return
+        
+        print("Leave blank/ just give enter - to keep old values")
+
+        while True:
+            try:
+                amount=float(input("Enter amount->"))
+
+                if amount <=0:
+                    print("Amount must be greater than 0-")
+                    continue
+
+                break
+            except ValueError:
+                print("Please enter valid number")
+
+        category=input("enter category->").strip()
+           
+        input_type=input("Enter Income/Expence->").strip().lower()
+
+        if amount:
+            transactions[index]["Amount"]=float(amount)
+        if category:
+            transactions[index]["Category"]=category
+        if input_type in ["income","expence"]:
+            transactions[index]["Input type"]=input_type
+
+        save_to_file()
+        print("Transaction updated successfully")
+
+    except ValueError:
+        print("Invalid Input")
+
+def delete_transactions():
+    view_transactions()
+
+    try:
+        index=int(input("Enter the Transaction ID to delete: "))
+
+        if index < 0 or index>= len(transactions):
+            print("Invalid ID")
+            return
+        
+        print("Leave blank/ just give enter - to keep old values")
+
+        transactions.pop(index)
+
+        save_to_file()
+        print("Transaction deleted successfully")
+
+    except ValueError:
+        print("Invalid Input")

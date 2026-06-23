@@ -73,10 +73,5 @@
         "Amount": 100.0,
         "Category": "bike",
         "Input type": "expence"
-    },
-    {
-        "Amount": 100.0,
-        "Category": "kavana",
-        "Input type": "income"
     }
 ]
