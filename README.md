@@ -34,7 +34,7 @@ Personal_Finance_Tracker/
 ├── services.py # All core functions (CRUD logic)
 ├── transactions.json # Stores data persistently
 └── README.md
-
+```
 ---
 
 ## ▶️ How to Run the Project
@@ -56,3 +56,4 @@ Welcome to Personal Finance Tracker
 3. Update Transaction
 4. Delete Transaction
 5. Exit
+```
