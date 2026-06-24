@@ -27,6 +27,7 @@ This project allows users to track income and expenses with full CRUD operations
 ---
 
 ## 📂 Project Structure
+```bash
 Personal_Finance_Tracker/
 │
 ├── main.py # Entry point of application
@@ -37,9 +38,8 @@ Personal_Finance_Tracker/
 ---
 
 ## ▶️ How to Run the Project
-
-1. Clone the repository:
 ```bash
+1.Clone the repository:
 git clone https://github.com/KavanaMswamy/Personal_Finance_Tracker.git
 
 2. Navigate into the project folder
