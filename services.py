@@ -75,6 +75,8 @@ def show_summary():
     print("Displaying the summary")
     total_income=0
     total_expence=0
+    #income = sum(t["amount"] for t in transactions if t["type"] == "income")
+    #expense = sum(t["amount"] for t in transactions if t["type"] == "expense")
     for transaction in transactions:
         if transaction["Input type"].lower()=="income":
             total_income+=transaction["Amount"]

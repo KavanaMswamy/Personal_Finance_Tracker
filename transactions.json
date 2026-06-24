@@ -73,5 +73,15 @@
         "Amount": 100.0,
         "Category": "bike",
         "Input type": "expence"
+    },
+    {
+        "Amount": 6.0,
+        "Category": "dummy",
+        "Input type": "income"
+    },
+    {
+        "Amount": 1000.0,
+        "Category": "salary",
+        "Input type": "income"
     }
 ]
